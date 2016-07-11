@@ -1,0 +1,16 @@
+
+<ul>
+<% @lojas.errors.full_messages.each do |msg| %>
+<li><%= msg %> </li>
+<% end %>
+</ul>
+
+<%= form_for @lojas do |f| %>
+	Nome: <%= f.text_field :nome %><br><br>
+	Endereço: <%= f.text_field :endereco %><br><br>
+	Especialidade: <%= f.text_field :especialidade %>
+	<%= f.submit %>
+
+<% end %><br>
+
+<%= link_to "Voltar", lojas_path %>
